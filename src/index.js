@@ -20,14 +20,16 @@ import Student from "views/examples/Student.js";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/presentation" render={() => {}} />
-      <Route path="/" render={(props) => <Presentation {...props} />} />
-      <Route path="/gallery" render={(props) => <Gallery {...props} />} />
-      <Route path="/faculty" render={(props) => <Faculty {...props} />} />
-      <Route path="/student" render={(props) => <Student {...props} />} />
-      <Route path="/blog-posts" render={(props) => <BlogPosts {...props} />} />
-      <Route path="/discover" render={(props) => <Discover {...props} />} />
-      {/* <Redirect to="/presentation" /> */}
+      <Route
+        path="/presentation"
+        render={props => <Presentation {...props} />}
+      />
+      <Route path="/gallery" render={props => <Gallery {...props} />} />
+      <Route path="/faculty" render={props => <Faculty {...props} />} />
+      <Route path="/student" render={props => <Student {...props} />} />
+      <Route path="/blog-posts" render={props => <BlogPosts {...props} />} />
+      <Route path="/discover" render={props => <Discover {...props} />} />
+      <Redirect to="/presentation" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
